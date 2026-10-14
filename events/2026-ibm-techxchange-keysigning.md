@@ -1,4 +1,4 @@
-= ZTRUST keysigning at IBM TechXchange 2026 =
+# ZTRUST keysigning at IBM TechXchange 2026
 
 2:50 – 3:00 PM
 
@@ -8,9 +8,9 @@ The ZTRUST Working Group maintains a web of trust in the form of signed keys by 
 
 If you’re reading this and maintain a GPG or PGP that you wish to have signed, or would just like to learn more about the group and process, that's you!
 
-== Instructions for Participating ==
+## Instructions for Participating
 
-=== Share your key ===
+### Share your key
 
 At the very least: Upload your key to a keyserver, so it can be publicly referenced and retrieved by participants.
 
@@ -27,13 +27,13 @@ uid           [ultimate] Elizabeth Krumbach Joseph <lyz@princessleia.com>
 ssb   rsa4096 2011-05-17 [E]
 ```
 
-=== At the event ===
+### At the event
 
 Confirm your key on the keyserver or swap physical, printed fingerprints with other attendees
 
 Everyone compares the name on the key with a physical ID (passport or other government-issued identification, such as a drivers license)
 
-=== At home ===
+### At home
 
 1. Retrieve the key(s) you wish to sign from keyservers, or [ZTRUST signing repository](https://github.com/openmainframeproject/wg-ztrust/tree/main/pgp/signing)
 
@@ -45,6 +45,6 @@ Compare all of the information displayed to the information you confirmed in-per
 
 3. Send signed keys back to their owner.
 
-For example: gpg --armor --output owners-key.signed-by.my-key.asc --export FINGERPRINT
+For example: `gpg --armor --output owners-key.signed-by.my-key.asc --export FINGERPRINT`
 
 And email that owners-key.signed-by.my-key.asc file to the owner.
