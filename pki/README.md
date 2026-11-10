@@ -11,7 +11,7 @@ but also to provide information, explanation, documentation,
 and simplification of the topics.
 
 PKI is an acronym for "Public Key Infrastructure".
-So-called public key cryptography in turn is used not only for
+So-called public key cryptography, in turn, is used not only for
 PKI certificates but also for such services as PGP and SSH
 as well as countless security tools.
 
@@ -25,11 +25,13 @@ to verify "leaf certificates" particularly in the Z community.
 
 ## Signing
 
-Root certificates are not "issued" by another certificate.
-Root certificates are self-signed. Other certificates being self-signed,
-such as a self-signed server certificate, is generally not good practice.
+Root PKI certificates are self-signed; they are not "issued" by another
+certificate. Root certificates serve as the head of the trust chain.
+Other certificates being self-signed, such as a self-signed server certificate,
+is generally not best practice. (Though it is sometimes warranted.)
 The veracity of a root certificate is indicated by its presence in the
-trust store distributed with the operating system or package.
+local trust store. Trust stores containing many root PKI certificates
+are distributed with the operating system or package.
 
 PKI root certificates found here *may* be signed by PGP keys
 (found in the companion "pgp" folder) as *detached* signatures.

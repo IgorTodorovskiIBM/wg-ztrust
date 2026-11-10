@@ -10,15 +10,24 @@ for code signing.
 
 ## Naming
 
-PEM-encoded certificates have a file type extension of `.crt`.
+PEM-encoded certificates (armored) have a file type extension of `.crt`.
 
 DER-encoded certificates (that is, binary) are not recommended here.
 
-Human readable "text" form certs have a file type extension of `.txt`.
-The PEM-encoded certificate will be found at the end of such a file.
+Human readable "text" form certs found here have a file type extension
+of `.txt`. The PEM-encoded certificate itself will be found at the end
+of such a file. These human readable forms are easily generated with ...
+
+    openssl x509 -text -in rootcert.crt > rootcert.txt
 
 Detached PGP signatures have a file type extension of `.asc`
 indicating that they are ASCII-armored. The full extension is `.crt.asc`.
+PGP-signed root PKI certificates can be verified with ...
+
+    gpg --verify rootcert.crt.asc
+
+You will, of course, need the signing key in your local PGP/GPG keyring.
+See the PGP collection found in this repository.
 
 ## Rationale
 
