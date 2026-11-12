@@ -1,0 +1,14 @@
+# Public key and certificate material is this repository's content, not a leak.
+# PGP public keys and root CA certificates are meant to be published and
+# copied; flagging them blocks every legitimate contribution to this project.
+#
+# Private keys are still blocked. Verified against Vault Radar 3.0.2:
+#   PGP private key  -> "PGP private key"  (medium)  still blocks
+#   RSA/SSH key      -> "Private key"      (medium)  still blocks
+# A PGP secret key also raises "cryptographic_key_bundle", but the second
+# finding above still stops the commit, so this exclusion cannot let one in.
+#
+# Reference: https://w3.ibm.com/w3publisher/block-secrets/exclusions
+- secret_types:
+    - "certificate"
+    - "cryptographic_key_bundle"
